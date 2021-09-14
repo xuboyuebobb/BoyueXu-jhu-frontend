@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    margin: auto;
+    background-color: black;
+    overflow: scroll;
+    margin: 1px;
+}
+
+.Chicken {
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 70%;
+    border-style: solid;
+    border-color: aliceblue;
+    color: aliceblue;
+    text-align: center;
+    background-color: blueviolet;
+    margin-top: 0px;
+}
+
+.Beef {
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 70%;
+    border-style: solid;
+    border-color: aliceblue;
+    color: aliceblue;
+    text-align: center;
+    background-color: brown;
+    margin-top: 0px;
+}
+
+.Sushi {
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 70%;
+    border-style: solid;
+    border-color: aliceblue;
+    color: aliceblue;
+    text-align: center;
+    background-color: burlywood;
+    margin-top: 0px;
+}
+
+#hidden {
+    visibility: hidden;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    color: antiquewhite;
+    overflow: scroll;
+    padding: 20px;
+    height: 100px;
+    overflow: scroll;
+    cursor: col-resize;
+}
+
+/**Desktop Device**/
+@media (min-width: 992px) {
+    .col-lg-4 {
+        float: left;
+        width: 33%;
+    }
+}
+
+
+
+/**Tablet Device**/
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-6 {
+        float: left;
+        width: 49%;
+    }
+
+    .col-md-12 {
+        float: left;
+        width: 98.5%;
+    }
+}
+
+
+
+/**Mobile Device**/
+@media (max-width: 767px) {
+    .col-sm-12 {
+        float: left;
+        width: 100%;
+    }
+
+    .Beef{
+        margin-left: 0%;
+        overflow: none;
+    }
+
+    .Chicken {
+        margin-left: 0%;
+        overflow: none;
+    }
+
+    .Sushi {
+        margin-left: 0%;
+        overflow: none;
+    }
+
+    h1 {
+        visibility: hidden;
+    }
+
+    
+    #hidden {
+        content: Our Fire;
+        visibility: visible;
+        text-align: center;
+    }
+
+    .Chicken:after{
+        content: ": The best food in the world for eating and it is very very good";
+        text-align: left;
+    }
+
+    .Beef:after{
+        content: ": The best food in the world for eating and it is very very good";
+        text-align: left;
+    }
+
+    .Sushi:after{
+        content: ": The best food in the world for eating and it is very very good";
+        text-align: left;
+    }
+}
+
