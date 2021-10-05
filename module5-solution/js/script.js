@@ -140,8 +140,10 @@ function chooseRandomCategory (categories) {
   return categories[randomArrayIndex];
 }
 
-function getRandomArbitrary(min, max) {
-  return Math.random() * (max - min) + min;
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 // Load the about rating view
@@ -155,12 +157,50 @@ dc.loadAboutRatings = function () {
 
 function buildAndShowAboutHTML (aboutHtml) {
     var finalHtml = aboutHtml;
-    var random = getRandomArbitrary(1, 6);
-    var starFilled = "fa fa-star";
-    var starUnFilled = "fa fa-star-o";
-    var aboutHtmlToInsertIntoMainPage = insertProperty(aboutHtml, "starValue", starFilled);
-    console.log(aboutHtmlToInsertIntoMainPage);
-      // Done 
+    var i = getRandomInt(1, 5);
+    var starFilled = "fas fa-star";
+    var starUnFilled = "fas fa-star-o";
+    if (i === 1) {
+      aboutHtml = insertProperty(aboutHtml, "starValue1", starFilled);
+      aboutHtml = insertProperty(aboutHtml, "starValue2", starUnFilled);
+      aboutHtml = insertProperty(aboutHtml, "starValue3", starUnFilled);
+      aboutHtml = insertProperty(aboutHtml, "starValue4", starUnFilled);
+      var aboutHtmlToInsertIntoMainPage = insertProperty(aboutHtml, "starValue5", starUnFilled);
+    }
+
+    if (i === 2) {
+      aboutHtml = insertProperty(aboutHtml, "starValue1", starFilled);
+      aboutHtml = insertProperty(aboutHtml, "starValue2", starFilled);
+      aboutHtml = insertProperty(aboutHtml, "starValue3", starUnFilled);
+      aboutHtml = insertProperty(aboutHtml, "starValue4", starUnFilled);
+      var aboutHtmlToInsertIntoMainPage = insertProperty(aboutHtml, "starValue5", starUnFilled);
+    }
+
+    if (i === 3) {
+      aboutHtml = insertProperty(aboutHtml, "starValue1", starFilled);
+      aboutHtml = insertProperty(aboutHtml, "starValue2", starFilled);
+      aboutHtml = insertProperty(aboutHtml, "starValue3", starFilled);
+      aboutHtml = insertProperty(aboutHtml, "starValue4", starUnFilled);
+      var aboutHtmlToInsertIntoMainPage = insertProperty(aboutHtml, "starValue5", starUnFilled);
+    }
+
+    if (i === 4) {
+      aboutHtml = insertProperty(aboutHtml, "starValue1", starFilled);
+      aboutHtml = insertProperty(aboutHtml, "starValue2", starFilled);
+      aboutHtml = insertProperty(aboutHtml, "starValue3", starFilled);
+      aboutHtml = insertProperty(aboutHtml, "starValue4", starFilled);
+      var aboutHtmlToInsertIntoMainPage = insertProperty(aboutHtml, "starValue5", starUnFilled);
+    }
+
+    if (i === 5) {
+      vaboutHtml = insertProperty(aboutHtml, "starValue1", starFilled);
+      aboutHtml = insertProperty(aboutHtml, "starValue2", starFilled);
+      aboutHtml = insertProperty(aboutHtml, "starValue3", starFilled);
+      aboutHtml = insertProperty(aboutHtml, "starValue4", starFilled);
+      var aboutHtmlToInsertIntoMainPage = insertProperty(aboutHtml, "starValue5", starFilled);
+    }
+
+
     insertHtml("#main-content", aboutHtmlToInsertIntoMainPage);
 }
 
