@@ -153,15 +153,15 @@ dc.loadAboutRatings = function () {
     false);
 };
 
-function buildAndShowAboutHTML () {
-    $ajaxUtils.sendGetRequest
+function buildAndShowAboutHTML (aboutHtml) {
+    var finalHtml = aboutHtml;
     var random = getRandomArbitrary(1, 6);
     var starFilled = "fa fa-star";
     var starUnFilled = "fa fa-star-o";
-    var aboutHtmlToInsertIntoMainPage = insertProperty(aboutHtmlUrl, "starValue", starFilled);
+    var aboutHtmlToInsertIntoMainPage = insertProperty(aboutHtml, "starValue", starFilled);
+    console.log(aboutHtmlToInsertIntoMainPage);
       // Done 
-    insertHtml("main-content", aboutHtmlToInsertIntoMainPage);    
-    return finalHtml; 
+    insertHtml("#main-content", aboutHtmlToInsertIntoMainPage);
 }
 
 // Load the menu categories view
