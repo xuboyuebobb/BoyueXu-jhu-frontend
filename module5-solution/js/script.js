@@ -193,7 +193,7 @@ function buildAndShowAboutHTML (aboutHtml) {
     }
 
     if (i === 5) {
-      vaboutHtml = insertProperty(aboutHtml, "starValue1", starFilled);
+      aboutHtml = insertProperty(aboutHtml, "starValue1", starFilled);
       aboutHtml = insertProperty(aboutHtml, "starValue2", starFilled);
       aboutHtml = insertProperty(aboutHtml, "starValue3", starFilled);
       aboutHtml = insertProperty(aboutHtml, "starValue4", starFilled);
