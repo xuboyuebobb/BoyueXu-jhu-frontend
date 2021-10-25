@@ -2,38 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c14d371-d097-49a5-abd8-e25143e774ca" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.jshintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/angular.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/core/version/interpolate-filter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/core/version/interpolate-filter.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/core/version/version-directive.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/core/version/version-directive.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/core/version/version.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/core/version/version.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/styles/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/view1/view1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/view1/view1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/view1/view1.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/view2/view2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/view2/view2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/view2/view2.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e2e-tests/protractor.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e2e-tests/scenarios.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/karma.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1635061331255</updated>
-      <workItem from="1635061421167" duration="11719000" />
+      <workItem from="1635061421167" duration="12319000" />
     </task>
     <servers />
   </component>
