@@ -1,0 +1,9 @@
+<br>
+<br>
+<h3>Title: {{narrowController.myTitle}}</h3>
+<ol>
+    <li ng-repeat="item in narrowController.items">
+        {{ item.name }}, {{ item.short_name }}, {{ item.description }}
+        <button ng-click="narrowController.onRemove({index: $index});">Remove Item</button>
+    </li>
+</ol>
