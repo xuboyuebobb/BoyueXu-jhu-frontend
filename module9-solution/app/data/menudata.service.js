@@ -1,24 +1,30 @@
 (function() {
     'use strict';
-
+    // This service should be declared in the data module. 
     angular.module('data')
-        .service('MenuDataService', MenuDataService);
+        .service('MenuDataService', MenuDataService)
+        .constant('ApiBasePath', "https://davids-restaurant.herokuapp.com");
 
-    MenuDataService.$inject = ['$rootScope', '$http', 'ApiBasePath']
-    function MenuDataService($rootScope, $http, ApiBasePath) {
-        var service = {
-            getAllCategories: getAllCategories,
-            getItemsForCategory: getItemsForCategory
-        };
+    MenuDataService.$inject = ['$http', 'ApiBasePath']
+    function MenuDataService($http, ApiBasePath) {
+        var service = this; 
 
-        return service;
-
-        function getAllCategories() {
-
+        service.getAllCategories = function() {
+            return $http({
+                method: "GET",
+                url: (ApiBasePath + "/categories.json")
+            }).then(function(response){
+                return response.data; 
+            });
         }
 
-        function getItemsForCategory(categoryShortName) {
-
+        service.getItemsForCategory = function(categoryShortName) {
+            return $http({
+                method: "GET",
+                url: (ApiBasePath + "menu_items.json?category=" + categoryShortName)
+            }).then(function(response){
+                return response.data.medu_items; 
+            })
         }
     }
 
