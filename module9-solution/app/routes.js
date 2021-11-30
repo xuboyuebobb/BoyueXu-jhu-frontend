@@ -15,9 +15,24 @@
             })
             .state('categories', {
                 url: '/categories',
-                templateUrl: 'app/templates/categories.template.html',
-                controller: 'categoriesController as categoriesCtrl',
+                templateUrl: 'app/template/categories.template.html',
+                controller: 'CategoriesController as categoryList',
+                resolve: {
+                    categories: ['MenuDataService', function (MenuDataService) {
+                        console.log("Route categories is" + MenuDataService.getAllCategories());
+                        return MenuDataService.getAllCategories();
+                    }]
+                }
+            })
+            .state('items', {
+                url: '/categories/{categoryShortName}',
+                templateUrl: 'app/template/items.template.html',
+                controller: 'ItemsController as itemList',
+                resolve: {
+                    items: ['$stateParams', 'MenuDataService', function($stateParams, MenuDataService) {
+                        return MenuDataService.getItemsForCategory($stateParams.categoryShortName);
+                    }]
+                }
             });
-
     }
 })();

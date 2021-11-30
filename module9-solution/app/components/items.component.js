@@ -2,8 +2,8 @@
     'use strict';
   
     angular.module('MenuApp')
-      .component('categories', {
-        templateUrl: 'components/items.component.html',
+      .component('itemList', {
+        templateUrl: 'app/components/items.component.html',
         bindings: {
           items: '<'
         }

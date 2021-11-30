@@ -14,6 +14,7 @@
                 method: "GET",
                 url: (ApiBasePath + "/categories.json")
             }).then(function(response){
+                console.log(response.data);
                 return response.data; 
             });
         };
@@ -21,9 +22,10 @@
         service.getItemsForCategory = function(categoryShortName) {
             return $http({
                 method: "GET",
-                url: (ApiBasePath + "menu_items.json?category=" + categoryShortName)
+                url: (ApiBasePath + "/menu_items.json?category=" + categoryShortName)
             }).then(function(response){
-                return response.data.medu_items; 
+                console.log(response.data);
+                return response.data.menu_items;
             });
         };
     }
