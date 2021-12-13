@@ -117,6 +117,21 @@ body {
 a[ui-sref="admin.auth"] {
   color: #fff;
 }
+
+.ng-touched.ng-valid {
+  border: 2px green solid;
+}
+
+.ng-touched.ng-invalid {
+  border: 2px red solid;
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font: inherit;
+  color: whitesmoke;
+  background: black;
+}
 /* END FOOTER */
 
 /********** Medium devices only **********/

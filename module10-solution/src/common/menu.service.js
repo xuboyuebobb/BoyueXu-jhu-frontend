@@ -8,6 +8,7 @@ angular.module('common')
 MenuService.$inject = ['$http', 'ApiPath'];
 function MenuService($http, ApiPath) {
   var service = this;
+  service.user = {};
 
   service.getCategories = function () {
     return $http.get(ApiPath + '/categories.json').then(function (response) {
@@ -30,12 +31,15 @@ function MenuService($http, ApiPath) {
     return $http.get(ApiPath + '/menu_items/' + short_name + '.json');
   }
 
-  service.saveUser = function () {
+  service.saveUser = function (user) {
     //TODO: To write how tto save user
+    service.user = angular.copy(user);
+    console.log(service.user);
   }
 
   service.getUser = function () {
     //TODO: Return a user to here
+    return service.user;
   }
 
 }

@@ -1,2 +1,20 @@
-<h1>You need to signup first</h1>
-<button ui-sref="public.signup">Signup</button>
+<div ng-if="infoCtrl.isEmpty">
+    <h1>Not Signed Up Yet. Sign up Now!</h1>
+    <button class="active" ui-sref="public.signup">Signup</button>
+</div>
+
+<div ng-if="!infoCtrl.isEmpty">
+    <h4>User Information</h4>
+    <span>Full name: {{infoCtrl.user.firstName}} {{infoCtrl.user.lastName}}</span>
+    <br>
+    <span>Email: {{infoCtrl.user.email}}</span>
+    <br>
+    <span>Phone: {{infoCtrl.user.phone}}</span>
+    <h4>Dish Selection</h4>
+    <img ng-src="https://xuboyuebobxu.herokuapp.com/images/{{infoCtrl.user.favoriteDish.short_name}}.jpg" alt="image"/>
+    <br>
+    <span>{{infoCtrl.user.favoriteDish.name}}</span>
+    <br>
+    <span>{{infoCtrl.user.favoriteDish.description}}</span>
+</div>
+
